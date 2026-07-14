@@ -37,8 +37,8 @@ func main() {
 	message := renderMessage(reminder.Text)
 
 	client := telegram.New(cfg.Token)
-	if reminder.Photo != "" {
-		if err := client.SendPhoto(group.ChatID, reminder.Photo, message, threadID); err != nil {
+	if reminder.Photo {
+		if err := client.SendPhoto(group.ChatID, randomPhotoURL(), message, threadID); err != nil {
 			log.Fatalf("send photo: %v", err)
 		}
 	} else {
@@ -48,6 +48,12 @@ func main() {
 	}
 
 	log.Printf("sent reminder %q to group %q (chat_id=%s)", reminder.Name, reminder.Group, group.ChatID)
+}
+
+// randomPhotoURL sinh URL ảnh ngẫu nhiên từ picsum.photos. Tham số random đổi
+// theo thời điểm chạy (nano) nên mỗi lần gửi Telegram tải về một ảnh khác nhau.
+func randomPhotoURL() string {
+	return fmt.Sprintf("https://picsum.photos/800/500?random=%d", time.Now().UnixNano())
 }
 
 // renderMessage ghép tiêu đề ngày động (thứ + ngày/tháng/năm theo giờ VN) vào
