@@ -1,14 +1,14 @@
 name: telegram-reminder
 on:
   schedule:
-    # 07:00 giờ VN (UTC+7) = 00:00 UTC. Field cuối là thứ trong tuần (0=CN, 1=T2..6=T7).
-    - cron: "0 0 * * 1"   # Thứ 2 -> mon
-    - cron: "0 0 * * 2"   # Thứ 3 -> tue
-    - cron: "0 0 * * 3"   # Thứ 4 -> wed
-    - cron: "0 0 * * 4"   # Thứ 5 -> thu
-    - cron: "0 0 * * 5"   # Thứ 6 -> fri
-    - cron: "0 0 * * 6"   # Thứ 7 -> sat
-    - cron: "0 0 * * 0"   # Chủ nhật -> sun
+    # 06:00 giờ VN (UTC+7) = 23:00 UTC ngày trước. Field cuối là thứ trong tuần (0=CN, 1=T2..6=T7).
+    - cron: "0 23 * * 0"   # Thứ 2 -> mon (VN 06:00)
+    - cron: "0 23 * * 1"   # Thứ 3 -> tue (VN 06:00)
+    - cron: "0 23 * * 2"   # Thứ 4 -> wed (VN 06:00)
+    - cron: "0 23 * * 3"   # Thứ 5 -> thu (VN 06:00)
+    - cron: "0 23 * * 4"   # Thứ 6 -> fri (VN 06:00)
+    - cron: "0 23 * * 5"   # Thứ 7 -> sat (VN 06:00)
+    - cron: "0 23 * * 6"   # Chủ nhật -> sun (VN 06:00)
   workflow_dispatch:        # bấm chạy tay để test
     inputs:
       reminder_name:
@@ -27,13 +27,13 @@ jobs:
         id: pick
         run: |
           case "${{ github.event.schedule }}" in
-            "0 0 * * 1") echo "name=mon" >> "$GITHUB_OUTPUT" ;;
-            "0 0 * * 2") echo "name=tue" >> "$GITHUB_OUTPUT" ;;
-            "0 0 * * 3") echo "name=wed" >> "$GITHUB_OUTPUT" ;;
-            "0 0 * * 4") echo "name=thu" >> "$GITHUB_OUTPUT" ;;
-            "0 0 * * 5") echo "name=fri" >> "$GITHUB_OUTPUT" ;;
-            "0 0 * * 6") echo "name=sat" >> "$GITHUB_OUTPUT" ;;
-            "0 0 * * 0") echo "name=sun" >> "$GITHUB_OUTPUT" ;;
+            "0 23 * * 0") echo "name=mon" >> "$GITHUB_OUTPUT" ;;
+            "0 23 * * 1") echo "name=tue" >> "$GITHUB_OUTPUT" ;;
+            "0 23 * * 2") echo "name=wed" >> "$GITHUB_OUTPUT" ;;
+            "0 23 * * 3") echo "name=thu" >> "$GITHUB_OUTPUT" ;;
+            "0 23 * * 4") echo "name=fri" >> "$GITHUB_OUTPUT" ;;
+            "0 23 * * 5") echo "name=sat" >> "$GITHUB_OUTPUT" ;;
+            "0 23 * * 6") echo "name=sun" >> "$GITHUB_OUTPUT" ;;
             *)           echo "name=" >> "$GITHUB_OUTPUT" ;;
           esac
       - name: Gửi reminder
