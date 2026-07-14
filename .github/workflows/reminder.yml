@@ -1,8 +1,20 @@
 name: telegram-reminder
 on:
   schedule:
-    - cron: "0 2 * * *"      # 2h UTC = 9h sáng VN. Xem lưu ý bên dưới.
-  workflow_dispatch:          # cho phép bấm chạy tay để test
+    # 07:00 giờ VN (UTC+7) = 00:00 UTC. Field cuối là thứ trong tuần (0=CN, 1=T2..6=T7).
+    - cron: "0 0 * * 1"   # Thứ 2 -> mon
+    - cron: "0 0 * * 2"   # Thứ 3 -> tue
+    - cron: "0 0 * * 3"   # Thứ 4 -> wed
+    - cron: "0 0 * * 4"   # Thứ 5 -> thu
+    - cron: "0 0 * * 5"   # Thứ 6 -> fri
+    - cron: "0 0 * * 6"   # Thứ 7 -> sat
+    - cron: "0 0 * * 0"   # Chủ nhật -> sun
+  workflow_dispatch:        # bấm chạy tay để test
+    inputs:
+      reminder_name:
+        description: "Tên reminder gửi thử (mon/tue/wed/thu/fri/sat/sun). Để trống = mon."
+        required: false
+        default: ""
 jobs:
   remind:
     runs-on: ubuntu-latest
@@ -11,6 +23,22 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version-file: go.mod
-      - run: go run ./cmd
+      - name: Chọn reminder theo lịch cron
+        id: pick
+        run: |
+          case "${{ github.event.schedule }}" in
+            "0 0 * * 1") echo "name=mon" >> "$GITHUB_OUTPUT" ;;
+            "0 0 * * 2") echo "name=tue" >> "$GITHUB_OUTPUT" ;;
+            "0 0 * * 3") echo "name=wed" >> "$GITHUB_OUTPUT" ;;
+            "0 0 * * 4") echo "name=thu" >> "$GITHUB_OUTPUT" ;;
+            "0 0 * * 5") echo "name=fri" >> "$GITHUB_OUTPUT" ;;
+            "0 0 * * 6") echo "name=sat" >> "$GITHUB_OUTPUT" ;;
+            "0 0 * * 0") echo "name=sun" >> "$GITHUB_OUTPUT" ;;
+            *)           echo "name=" >> "$GITHUB_OUTPUT" ;;
+          esac
+      - name: Gửi reminder
+        run: go run ./cmd
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          # Chạy tay -> dùng input; chạy theo lịch -> dùng tên map từ cron.
+          REMINDER_NAME: ${{ github.event.inputs.reminder_name || steps.pick.outputs.name }}

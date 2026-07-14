@@ -3,6 +3,57 @@ groups:
     chat_id: "-5366865126"
     message_thread_id: ""
 reminders:
-  - name: "daily-standup"
+  - name: "mon"
     group: "clinic-ops"
-    text: "☀️ Hello"
+    text: |-
+      📅 <b>Thứ 2</b>
+      • Gym
+      • Học Toán
+      • Ôn IELTS
+      • Tech
+  - name: "tue"
+    group: "clinic-ops"
+    text: |-
+      📅 <b>Thứ 3</b>
+      • Chứng sức nhận sinh lên tới SS Hữu hạn
+      • Xem lại bài
+      • Học IELTS
+      • Ôn từ vựng
+  - name: "wed"
+    group: "clinic-ops"
+    text: |-
+      📅 <b>Thứ 4</b>
+      • Gym
+      • Học IELTS
+      • Tech
+      • Ôn từ vựng
+      • Toán
+  - name: "thu"
+    group: "clinic-ops"
+    text: |-
+      📅 <b>Thứ 5</b>
+      • Gym
+      • Học IELTS
+      • Tech
+      • Ôn từ vựng
+      • Xem lại bài
+  - name: "fri"
+    group: "clinic-ops"
+    text: |-
+      📅 <b>Thứ 6</b>
+      • Gym
+      • Tech
+  - name: "sat"
+    group: "clinic-ops"
+    text: |-
+      📅 <b>Thứ 7</b>
+      • Ngày Hơi Lì 😄
+      • Học IELTS
+      • +4 (các mục khác)
+  - name: "sun"
+    group: "clinic-ops"
+    text: |-
+      📅 <b>Chủ nhật</b>
+      • Gym
+      • IELTS
+      • Toán
