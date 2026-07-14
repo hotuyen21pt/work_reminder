@@ -1,0 +1,16 @@
+name: telegram-reminder
+on:
+  schedule:
+    - cron: "0 2 * * *"      # 2h UTC = 9h sáng VN. Xem lưu ý bên dưới.
+  workflow_dispatch:          # cho phép bấm chạy tay để test
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - run: go run ./cmd
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}

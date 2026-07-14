@@ -1,0 +1,8 @@
+groups:
+  clinic-ops:
+    chat_id: "-5366865126"
+    message_thread_id: ""
+reminders:
+  - name: "daily-standup"
+    group: "clinic-ops"
+    text: "☀️ Hello"

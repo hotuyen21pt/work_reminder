@@ -1,0 +1,15 @@
+# Token / secrets cục bộ — tuyệt đối không commit
+.env
+*.env
+config/*.local.yml
+config/secrets.yml
+
+# Binary build
+/work_reminder
+/reminder
+*.exe
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
