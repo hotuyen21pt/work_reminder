@@ -7,60 +7,81 @@ reminders:
     group: "clinic-ops"
     photo: "https://picsum.photos/seed/mon/800/500.jpg"
     text: |-
-      📅 <b>Thứ 2</b>
-      • Gym
-      • Học Toán
-      • Ôn IELTS
-      • Tech
+      ──────────
+      Việc hôm nay:
+      🏋️ Gym
+      ➕ Học Toán
+      📚 Ôn IELTS
+      💻 Tech
+
+      💪 Cố lên nè!
   - name: "tue"
     group: "clinic-ops"
     photo: "https://picsum.photos/seed/tue/800/500.jpg"
     text: |-
-      📅 <b>Thứ 3</b>
-      • Chứng sức nhận sinh lên tới SS Hữu hạn
-      • Xem lại bài
-      • Học IELTS
-      • Ôn từ vựng
+      ──────────
+      Việc hôm nay:
+      ✏️ Chứng sức nhận sinh lên tới SS Hữu hạn
+      📖 Xem lại bài
+      📚 Học IELTS
+      🔤 Ôn từ vựng
+
+      💪 Cố lên nè!
   - name: "wed"
     group: "clinic-ops"
     photo: "https://picsum.photos/seed/wed/800/500.jpg"
     text: |-
-      📅 <b>Thứ 4</b>
-      • Gym
-      • Học IELTS
-      • Tech
-      • Ôn từ vựng
-      • Toán
+      ──────────
+      Việc hôm nay:
+      🏋️ Gym
+      📚 Học IELTS
+      💻 Tech
+      🔤 Ôn từ vựng
+      ➕ Toán
+
+      💪 Cố lên nè!
   - name: "thu"
     group: "clinic-ops"
     photo: "https://picsum.photos/seed/thu/800/500.jpg"
     text: |-
-      📅 <b>Thứ 5</b>
-      • Gym
-      • Học IELTS
-      • Tech
-      • Ôn từ vựng
-      • Xem lại bài
+      ──────────
+      Việc hôm nay:
+      🏋️ Gym
+      📚 Học IELTS
+      💻 Tech
+      🔤 Ôn từ vựng
+      📖 Xem lại bài
+
+      💪 Cố lên nè!
   - name: "fri"
     group: "clinic-ops"
     photo: "https://picsum.photos/seed/fri/800/500.jpg"
     text: |-
-      📅 <b>Thứ 6</b>
-      • Gym
-      • Tech
+      ──────────
+      Việc hôm nay:
+      🏋️ Gym
+      💻 Tech
+
+      💪 Cố lên nè!
   - name: "sat"
     group: "clinic-ops"
     photo: "https://picsum.photos/seed/sat/800/500.jpg"
     text: |-
-      📅 <b>Thứ 7</b>
-      • Ngày Hơi Lì 😄
-      • Học IELTS
-      • +4 (các mục khác)
+      ──────────
+      Việc hôm nay:
+      😌 Ngày Hơi Lì 😄
+      📚 Học IELTS
+      ➕ +4 (các mục khác)
+
+      💪 Cố lên nè!
   - name: "sun"
     group: "clinic-ops"
     photo: "https://picsum.photos/seed/sun/800/500.jpg"
     text: |-
-      📅 <b>Chủ nhật</b>
-      • Gym
-      • IELTS
-      • Toán
+      ──────────
+      Việc hôm nay:
+      🏋️ Gym
+      📚 IELTS
+      ➕ Toán
+
+      💪 Cố lên nè!
