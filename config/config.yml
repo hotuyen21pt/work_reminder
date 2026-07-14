@@ -5,6 +5,7 @@ groups:
 reminders:
   - name: "mon"
     group: "clinic-ops"
+    photo: "https://picsum.photos/seed/mon/800/500.jpg"
     text: |-
       📅 <b>Thứ 2</b>
       • Gym
@@ -13,6 +14,7 @@ reminders:
       • Tech
   - name: "tue"
     group: "clinic-ops"
+    photo: "https://picsum.photos/seed/tue/800/500.jpg"
     text: |-
       📅 <b>Thứ 3</b>
       • Chứng sức nhận sinh lên tới SS Hữu hạn
@@ -21,6 +23,7 @@ reminders:
       • Ôn từ vựng
   - name: "wed"
     group: "clinic-ops"
+    photo: "https://picsum.photos/seed/wed/800/500.jpg"
     text: |-
       📅 <b>Thứ 4</b>
       • Gym
@@ -30,6 +33,7 @@ reminders:
       • Toán
   - name: "thu"
     group: "clinic-ops"
+    photo: "https://picsum.photos/seed/thu/800/500.jpg"
     text: |-
       📅 <b>Thứ 5</b>
       • Gym
@@ -39,12 +43,14 @@ reminders:
       • Xem lại bài
   - name: "fri"
     group: "clinic-ops"
+    photo: "https://picsum.photos/seed/fri/800/500.jpg"
     text: |-
       📅 <b>Thứ 6</b>
       • Gym
       • Tech
   - name: "sat"
     group: "clinic-ops"
+    photo: "https://picsum.photos/seed/sat/800/500.jpg"
     text: |-
       📅 <b>Thứ 7</b>
       • Ngày Hơi Lì 😄
@@ -52,6 +58,7 @@ reminders:
       • +4 (các mục khác)
   - name: "sun"
     group: "clinic-ops"
+    photo: "https://picsum.photos/seed/sun/800/500.jpg"
     text: |-
       📅 <b>Chủ nhật</b>
       • Gym

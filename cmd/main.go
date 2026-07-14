@@ -34,8 +34,14 @@ func main() {
 	}
 
 	client := telegram.New(cfg.Token)
-	if err := client.SendMessage(group.ChatID, reminder.Text, threadID); err != nil {
-		log.Fatalf("send message: %v", err)
+	if reminder.Photo != "" {
+		if err := client.SendPhoto(group.ChatID, reminder.Photo, reminder.Text, threadID); err != nil {
+			log.Fatalf("send photo: %v", err)
+		}
+	} else {
+		if err := client.SendMessage(group.ChatID, reminder.Text, threadID); err != nil {
+			log.Fatalf("send message: %v", err)
+		}
 	}
 
 	log.Printf("sent reminder %q to group %q (chat_id=%s)", reminder.Name, reminder.Group, group.ChatID)

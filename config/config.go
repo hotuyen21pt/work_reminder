@@ -18,6 +18,8 @@ type Reminder struct {
 	Name  string `yaml:"name"`
 	Group string `yaml:"group"`
 	Text  string `yaml:"text"`
+	// Photo là URL ảnh (tùy chọn). Có ảnh thì gửi dạng sendPhoto với caption là Text.
+	Photo string `yaml:"photo"`
 }
 
 // Config là toàn bộ cấu hình đọc từ config.yml (+ token từ env).
