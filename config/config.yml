@@ -46,7 +46,7 @@ reminders:
       <blockquote expandable>🎤 <code>19:45–21:15</code> TOEIC Speaking
       📖 <code>21:15–22:30</code> TOEIC Reading</blockquote>
 
-      <i>💪 <tg-spoiler>Have a truly productive day!</tg-spoiler></i>
+      <i>💪 Have a truly productive day!</i>
 
   - name: "tue"
     group: "clinic-ops"
@@ -61,7 +61,7 @@ reminders:
       <blockquote expandable>💻 <code>19:00–20:30</code> Tech
       ✍️ <code>20:30–22:30</code> TOEIC Writing + Reading</blockquote>
 
-      <i>🚀 <tg-spoiler>Push today so tomorrow feels lighter!</tg-spoiler></i>
+      <i>🚀 Push today so tomorrow feels lighter!</i>
 
   - name: "wed"
     group: "clinic-ops"
@@ -77,7 +77,7 @@ reminders:
       <blockquote expandable>🎤 <code>19:45–21:15</code> TOEIC Speaking
       🎧 <code>21:15–22:30</code> TOEIC Listening</blockquote>
 
-      <i>🔥 <tg-spoiler>Keep the pace — success is near!</tg-spoiler></i>
+      <i>🔥 Keep the pace — success is near!</i>
 
   - name: "thu"
     group: "clinic-ops"
@@ -92,7 +92,7 @@ reminders:
       <blockquote expandable>💻 <code>19:00–20:30</code> Tech
       📖 <code>20:30–22:30</code> TOEIC Reading + Listening</blockquote>
 
-      <i>💯 <tg-spoiler>Persistence is the key to all success.</tg-spoiler></i>
+      <i>💯 Persistence is the key to all success.</i>
 
   - name: "fri"
     group: "clinic-ops"
@@ -108,7 +108,7 @@ reminders:
       <blockquote expandable>🎤 <code>19:45–21:15</code> TOEIC Speaking
       💻 <code>21:15–22:30</code> Tech</blockquote>
 
-      <i>🎉 <tg-spoiler>Finish strong and enjoy the weekend!</tg-spoiler></i>
+      <i>🎉 Finish strong and enjoy the weekend!</i>
 
   - name: "sat"
     group: "clinic-ops"
@@ -124,7 +124,7 @@ reminders:
       <blockquote expandable>💻 <code>14:00–17:00</code> Tech Project
       💻 <code>20:00–22:30</code> Tech + TOEIC Vocab</blockquote>
 
-      <i>💪 <tg-spoiler>Today is the day to level up!</tg-spoiler></i>
+      <i>💪 Today is the day to level up!</i>
 
   - name: "sun"
     group: "clinic-ops"
@@ -141,4 +141,4 @@ reminders:
       📖 <code>16:15–17:30</code> TOEIC Test review
       💻 <code>20:00–22:30</code> Tech + Weekly planning</blockquote>
 
-      <i>🌈 <tg-spoiler>Get ready for a great new week!</tg-spoiler></i>
+      <i>🌈 Get ready for a great new week!</i>
