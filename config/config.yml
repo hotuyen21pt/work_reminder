@@ -1,8 +1,36 @@
+# Plan start date (YYYY-MM-DD) -> shows "Day N". Change to your real start date.
+plan_start: "2026-07-20"
+
+# Random quote API (English). On network error -> falls back to the built-in list in code.
+quote_api: "https://zenquotes.io/api/random"
+
+# Animated emoji sent with each reminder — one picked at random for variety.
+# Only these 6 are supported by Telegram sendDice. Empty list = off.
+dice:
+  - "🎲"
+  - "🎯"
+  - "🏀"
+  - "⚽"
+  - "🎳"
+  - "🎰"
+
+# Emoji the bot reacts with on its own message (e.g. 🔥). Empty "" = off.
+reaction: "🔥"
+
+# Today's weather via Open-Meteo (free, no API key). Remove this block to turn off.
+# Change lat/lon to your city (find them on Google / open-meteo.com).
+weather:
+  lat: 10.82          # Ho Chi Minh City
+  lon: 106.63
+  label: "Ho Chi Minh City"
+
 groups:
   clinic-ops:
     chat_id: "-1004448791157"
     message_thread_id: ""
 
+# One message per day (sent at 06:00 VN) covering the WHOLE day.
+# Each day is split into Daytime and Afternoon & Evening, separated by a divider line.
 reminders:
   - name: "mon"
     group: "clinic-ops"
@@ -10,21 +38,15 @@ reminders:
     text: |-
       🌅 <b>GOOD MORNING!</b>
 
-      📅 <b>Thứ Hai</b>
+      ☀️ <b>Daytime</b>
+      <blockquote>🏋️ <code>06:30–07:30</code> Gym
+      💼 <code>08:30–17:30</code> Work</blockquote>
+      ━━━━━━━━━━━━━━━━━━━━━━━
+      🌙 <b>Afternoon &amp; Evening</b>
+      <blockquote expandable>🎤 <code>19:45–21:15</code> TOEIC Speaking
+      📖 <code>21:15–22:30</code> TOEIC Reading</blockquote>
 
-      🏋️ <b>06:30 - 07:30</b> Gym
-      💼 <b>08:30 - 17:30</b> Làm việc
-
-      📚 <b>Lịch học buổi tối</b>
-      ━━━━━━━━━━━━━━━
-      🕖 <b>19:45 - 21:15</b>
-      🎤 TOEIC Speaking
-
-      🕘 <b>21:15 - 22:30</b>
-      📖 TOEIC Reading
-
-      ━━━━━━━━━━━━━━━
-      💪 Chúc bạn có một ngày thật hiệu quả!
+      <i>💪 <tg-spoiler>Have a truly productive day!</tg-spoiler></i>
 
   - name: "tue"
     group: "clinic-ops"
@@ -32,20 +54,14 @@ reminders:
     text: |-
       🌅 <b>GOOD MORNING!</b>
 
-      📅 <b>Thứ Ba</b>
+      ☀️ <b>Daytime</b>
+      <blockquote>💼 <code>08:30–17:30</code> Work</blockquote>
+      ━━━━━━━━━━━━━━━━━━━━━━━
+      🌙 <b>Afternoon &amp; Evening</b>
+      <blockquote expandable>💻 <code>19:00–20:30</code> Tech
+      ✍️ <code>20:30–22:30</code> TOEIC Writing + Reading</blockquote>
 
-      💼 <b>08:30 - 17:30</b> Làm việc
-
-      📚 <b>Lịch học buổi tối</b>
-      ━━━━━━━━━━━━━━━
-      🕖 <b>19:00 - 20:30</b>
-      💻 Tech
-
-      🕣 <b>20:30 - 22:30</b>
-      ✍️ TOEIC Writing + Reading
-
-      ━━━━━━━━━━━━━━━
-      🚀 Cố gắng hôm nay để ngày mai nhẹ nhàng hơn!
+      <i>🚀 <tg-spoiler>Push today so tomorrow feels lighter!</tg-spoiler></i>
 
   - name: "wed"
     group: "clinic-ops"
@@ -53,21 +69,15 @@ reminders:
     text: |-
       🌅 <b>GOOD MORNING!</b>
 
-      📅 <b>Thứ Tư</b>
+      ☀️ <b>Daytime</b>
+      <blockquote>🏋️ <code>06:30–07:30</code> Gym
+      💼 <code>08:30–17:30</code> Work</blockquote>
+      ━━━━━━━━━━━━━━━━━━━━━━━
+      🌙 <b>Afternoon &amp; Evening</b>
+      <blockquote expandable>🎤 <code>19:45–21:15</code> TOEIC Speaking
+      🎧 <code>21:15–22:30</code> TOEIC Listening</blockquote>
 
-      🏋️ <b>06:30 - 07:30</b> Gym
-      💼 <b>08:30 - 17:30</b> Làm việc
-
-      📚 <b>Lịch học buổi tối</b>
-      ━━━━━━━━━━━━━━━
-      🕖 <b>19:45 - 21:15</b>
-      🎤 TOEIC Speaking
-
-      🕘 <b>21:15 - 22:30</b>
-      🎧 TOEIC Listening
-
-      ━━━━━━━━━━━━━━━
-      🔥 Giữ nhịp độ, thành công đang đến gần!
+      <i>🔥 <tg-spoiler>Keep the pace — success is near!</tg-spoiler></i>
 
   - name: "thu"
     group: "clinic-ops"
@@ -75,20 +85,14 @@ reminders:
     text: |-
       🌅 <b>GOOD MORNING!</b>
 
-      📅 <b>Thứ Năm</b>
+      ☀️ <b>Daytime</b>
+      <blockquote>💼 <code>08:30–17:30</code> Work</blockquote>
+      ━━━━━━━━━━━━━━━━━━━━━━━
+      🌙 <b>Afternoon &amp; Evening</b>
+      <blockquote expandable>💻 <code>19:00–20:30</code> Tech
+      📖 <code>20:30–22:30</code> TOEIC Reading + Listening</blockquote>
 
-      💼 <b>08:30 - 17:30</b> Làm việc
-
-      📚 <b>Lịch học buổi tối</b>
-      ━━━━━━━━━━━━━━━
-      🕖 <b>19:00 - 20:30</b>
-      💻 Tech
-
-      🕣 <b>20:30 - 22:30</b>
-      📖 TOEIC Reading + Listening
-
-      ━━━━━━━━━━━━━━━
-      💯 Kiên trì là chìa khóa của mọi thành công.
+      <i>💯 <tg-spoiler>Persistence is the key to all success.</tg-spoiler></i>
 
   - name: "fri"
     group: "clinic-ops"
@@ -96,66 +100,45 @@ reminders:
     text: |-
       🌅 <b>GOOD MORNING!</b>
 
-      📅 <b>Thứ Sáu</b>
+      ☀️ <b>Daytime</b>
+      <blockquote>🏋️ <code>06:30–07:30</code> Gym
+      💼 <code>08:30–17:30</code> Work</blockquote>
+      ━━━━━━━━━━━━━━━━━━━━━━━
+      🌙 <b>Afternoon &amp; Evening</b>
+      <blockquote expandable>🎤 <code>19:45–21:15</code> TOEIC Speaking
+      💻 <code>21:15–22:30</code> Tech</blockquote>
 
-      🏋️ <b>06:30 - 07:30</b> Gym
-      💼 <b>08:30 - 17:30</b> Làm việc
-
-      📚 <b>Lịch học buổi tối</b>
-      ━━━━━━━━━━━━━━━
-      🕖 <b>19:45 - 21:15</b>
-      🎤 TOEIC Speaking
-
-      🕘 <b>21:15 - 22:30</b>
-      💻 Tech
-
-      ━━━━━━━━━━━━━━━
-      🎉 Hoàn thành thật tốt để tận hưởng cuối tuần!
+      <i>🎉 <tg-spoiler>Finish strong and enjoy the weekend!</tg-spoiler></i>
 
   - name: "sat"
     group: "clinic-ops"
     photo: true
     text: |-
-      🌞 <b>THỨ BẢY</b>
+      🌞 <b>SATURDAY</b>
 
-      📚 <b>Lịch học hôm nay</b>
-      ━━━━━━━━━━━━━━━
-      🕣 <b>08:30 - 10:30</b>
-      📝 TOEIC Mock Test
+      ☀️ <b>Daytime</b>
+      <blockquote>📝 <code>08:30–10:30</code> TOEIC Mock Test
+      📖 <code>10:45–12:00</code> TOEIC Test review</blockquote>
+      ━━━━━━━━━━━━━━━━━━━━━━━
+      🌙 <b>Afternoon &amp; Evening</b>
+      <blockquote expandable>💻 <code>14:00–17:00</code> Tech Project
+      💻 <code>20:00–22:30</code> Tech + TOEIC Vocab</blockquote>
 
-      🕥 <b>10:45 - 12:00</b>
-      📖 Chữa đề TOEIC
-
-      🕑 <b>14:00 - 17:00</b>
-      💻 Tech Project
-
-      🕗 <b>20:00 - 22:30</b>
-      💻 Tech + Ôn từ vựng TOEIC
-
-      ━━━━━━━━━━━━━━━
-      💪 Hôm nay là ngày tăng tốc!
+      <i>💪 <tg-spoiler>Today is the day to level up!</tg-spoiler></i>
 
   - name: "sun"
     group: "clinic-ops"
     photo: true
     text: |-
-      ☀️ <b>CHỦ NHẬT</b>
+      ☀️ <b>SUNDAY</b>
 
-      🏋️ <b>06:30 - 07:30</b> Gym
+      ☀️ <b>Daytime</b>
+      <blockquote>🏋️ <code>06:30–07:30</code> Gym
+      💻 <code>09:00–11:30</code> Tech Project</blockquote>
+      ━━━━━━━━━━━━━━━━━━━━━━━
+      🌙 <b>Afternoon &amp; Evening</b>
+      <blockquote expandable>📖 <code>14:00–16:00</code> TOEIC Reading &amp; Listening
+      📖 <code>16:15–17:30</code> TOEIC Test review
+      💻 <code>20:00–22:30</code> Tech + Weekly planning</blockquote>
 
-      📚 <b>Lịch học hôm nay</b>
-      ━━━━━━━━━━━━━━━
-      🕘 <b>09:00 - 11:30</b>
-      💻 Tech Project
-
-      🕑 <b>14:00 - 16:00</b>
-      📖 TOEIC Reading & Listening
-
-      🕟 <b>16:15 - 17:30</b>
-      📖 Chữa đề TOEIC
-
-      🕗 <b>20:00 - 22:30</b>
-      💻 Tech + Lập kế hoạch tuần
-
-      ━━━━━━━━━━━━━━━
-      🌈 Chuẩn bị thật tốt cho một tuần mới!
+      <i>🌈 <tg-spoiler>Get ready for a great new week!</tg-spoiler></i>

@@ -1,0 +1,32 @@
+name: keepalive
+# GitHub tự TẮT mọi scheduled workflow nếu repo không có hoạt động nào trong 60 ngày.
+# Workflow này chạy hàng tuần; nếu repo đã im lặng >= 45 ngày thì tạo một commit rỗng
+# để "làm mới" hoạt động -> giữ cho reminder (và cả chính nó) không bị tắt.
+# Nếu bạn vẫn commit đều thì nó không làm gì cả (không spam lịch sử).
+on:
+  schedule:
+    - cron: "0 3 * * 1"   # 03:00 UTC mỗi Thứ 2 (giờ thấp điểm; keepalive không cần đúng giờ)
+  workflow_dispatch:        # bấm chạy tay để test
+
+permissions:
+  contents: write           # cần quyền push commit keepalive
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Tạo commit keepalive nếu repo im lặng >= 45 ngày
+        run: |
+          last=$(git log -1 --format=%ct)
+          now=$(date +%s)
+          days=$(( (now - last) / 86400 ))
+          echo "Số ngày kể từ commit gần nhất: $days"
+          if [ "$days" -lt 45 ]; then
+            echo "Repo còn hoạt động (< 45 ngày) -> không cần keepalive."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "chore: keepalive (giu scheduled workflow khong bi GitHub tat)"
+          git push
