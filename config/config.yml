@@ -17,17 +17,13 @@ reminders:
 
       📚 <b>Lịch học buổi tối</b>
       ━━━━━━━━━━━━━━━
-      🕖 <b>19:00 - 20:30</b>
-      🎧 TOEIC Listening
+      🕖 <b>19:45 - 21:15</b>
+      🎤 TOEIC Speaking
 
-      🕣 <b>20:30 - 22:00</b>
+      🕘 <b>21:15 - 22:30</b>
       📖 TOEIC Reading
 
-      🕙 <b>22:00 - 22:30</b>
-      🔤 Ôn từ vựng TOEIC
-
       ━━━━━━━━━━━━━━━
-      🌟 <i>Mỗi ngày tiến một chút cũng là tiến bộ.</i>
       💪 Chúc bạn có một ngày thật hiệu quả!
 
   - name: "tue"
@@ -42,14 +38,11 @@ reminders:
 
       📚 <b>Lịch học buổi tối</b>
       ━━━━━━━━━━━━━━━
-      🕖 <b>19:00 - 20:15</b>
-      ➕ Toán
+      🕖 <b>19:00 - 20:30</b>
+      💻 Tech
 
-      🕗 <b>20:15 - 21:15</b>
-      🎤 TOEIC Speaking
-
-      🕘 <b>21:15 - 22:30</b>
-      📖 TOEIC Reading
+      🕣 <b>20:30 - 22:30</b>
+      ✍️ TOEIC Writing + Reading
 
       ━━━━━━━━━━━━━━━
       🚀 Cố gắng hôm nay để ngày mai nhẹ nhàng hơn!
@@ -67,14 +60,11 @@ reminders:
 
       📚 <b>Lịch học buổi tối</b>
       ━━━━━━━━━━━━━━━
-      🕖 <b>19:00 - 20:30</b>
-      💻 Tech
+      🕖 <b>19:45 - 21:15</b>
+      🎤 TOEIC Speaking
 
-      🕣 <b>20:30 - 22:00</b>
+      🕘 <b>21:15 - 22:30</b>
       🎧 TOEIC Listening
-
-      🕙 <b>22:00 - 22:30</b>
-      🔤 Ôn từ vựng TOEIC
 
       ━━━━━━━━━━━━━━━
       🔥 Giữ nhịp độ, thành công đang đến gần!
@@ -91,14 +81,11 @@ reminders:
 
       📚 <b>Lịch học buổi tối</b>
       ━━━━━━━━━━━━━━━
-      🕖 <b>19:00 - 20:15</b>
-      ➕ Toán
+      🕖 <b>19:00 - 20:30</b>
+      💻 Tech
 
-      🕗 <b>20:15 - 21:15</b>
-      ✍️ TOEIC Writing
-
-      🕘 <b>21:15 - 22:30</b>
-      🎧 TOEIC Listening
+      🕣 <b>20:30 - 22:30</b>
+      📖 TOEIC Reading + Listening
 
       ━━━━━━━━━━━━━━━
       💯 Kiên trì là chìa khóa của mọi thành công.
@@ -116,11 +103,11 @@ reminders:
 
       📚 <b>Lịch học buổi tối</b>
       ━━━━━━━━━━━━━━━
-      🕖 <b>19:00 - 21:30</b>
-      💻 Tech
-
-      🕤 <b>21:30 - 22:30</b>
+      🕖 <b>19:45 - 21:15</b>
       🎤 TOEIC Speaking
+
+      🕘 <b>21:15 - 22:30</b>
+      💻 Tech
 
       ━━━━━━━━━━━━━━━
       🎉 Hoàn thành thật tốt để tận hưởng cuối tuần!
@@ -139,14 +126,11 @@ reminders:
       🕥 <b>10:45 - 12:00</b>
       📖 Chữa đề TOEIC
 
-      🕑 <b>14:00 - 16:30</b>
+      🕑 <b>14:00 - 17:00</b>
       💻 Tech Project
 
-      🕔 <b>16:45 - 18:00</b>
-      ➕ Toán
-
       🕗 <b>20:00 - 22:30</b>
-      🎤 TOEIC Speaking & Writing
+      💻 Tech + Ôn từ vựng TOEIC
 
       ━━━━━━━━━━━━━━━
       💪 Hôm nay là ngày tăng tốc!
@@ -162,12 +146,12 @@ reminders:
       📚 <b>Lịch học hôm nay</b>
       ━━━━━━━━━━━━━━━
       🕘 <b>09:00 - 11:30</b>
-      📖 TOEIC Reading & Listening
+      💻 Tech Project
 
       🕑 <b>14:00 - 16:00</b>
-      ➕ Toán
+      📖 TOEIC Reading & Listening
 
-      🕓 <b>16:15 - 17:30</b>
+      🕟 <b>16:15 - 17:30</b>
       📖 Chữa đề TOEIC
 
       🕗 <b>20:00 - 22:30</b>
